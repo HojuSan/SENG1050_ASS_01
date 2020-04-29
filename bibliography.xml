@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- DTD -->
+
+<!DOCTYPE bibliography [
+<!-- + one or more, * zero or more, ? zero or one-->
+<!ELEMENT bibliography (book+)>
+  <!ELEMENT book (author+, title, pub?, year, URL*)>
+  <!ELEMENT author (
+	(givenname | nickname)?, surname)>
+  <!ELEMENT givenname (#PCDATA)>
+  <!ELEMENT nickname (#PCDATA)>
+  <!ELEMENT surname (#PCDATA)>
+  <!ELEMENT title (#PCDATA)>
+  <!ELEMENT pub (#PCDATA)>
+  <!ELEMENT year (#PCDATA)>
+  <!ELEMENT URL (#PCDATA)>
+]>
+
+<!--XML-->
+<bibliography>
+   <book>
+	<author>
+		<nickname>Fred</nickname>
+		<surname>Flintstone</surname>
+	</author>
+	<author>
+		<givenname>Helen</givenname>
+		<surname>James</surname>
+	</author>
+	<title>"Statistical Database Disclosure"</title>
+	<year>2006</year>
+	<URL>http://some.webaddress.com</URL>
+	<URL>http://another.webaddress.com</URL>
+   </book>
+   <book>
+	<author>
+		<surname>Simpson</surname>
+	</author>
+	<title>"Homer's Odyssey"</title>
+	<pub>Springer Verlag</pub>
+	<year>2003</year>
+   </book>
+</bibliography>
