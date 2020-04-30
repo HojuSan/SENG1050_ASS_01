@@ -6,7 +6,7 @@
 <!--must add two tags?-->
 <!ELEMENT Breakfast (recipe+)>
   <!ELEMENT recipe (author+, title, ingredients+, instructions+, time+,
-  serves+, url*, img+, properties*)>
+  serves+, url*, img?, properties?)>
   <!ELEMENT author (
 	(givenname | nickname)?, surname)>
   <!ELEMENT givenname (#PCDATA)>
@@ -15,7 +15,10 @@
   <!ELEMENT title (#PCDATA)>
   <!ELEMENT ingredients (#PCDATA)>
   <!ELEMENT instructions (#PCDATA)>
-  <!ELEMENT time (#PCDATA)>
+  <!ELEMENT time (hours?, minutes?, seconds?)>
+  <!ELEMENT hours (#PCDATA)>
+  <!ELEMENT minutes (#PCDATA)>
+  <!ELEMENT seconds (#PCDATA)>
   <!ELEMENT serves (#PCDATA)>
   <!ELEMENT url (#PCDATA)>
   <!ELEMENT img (#PCDATA)>
@@ -42,28 +45,36 @@
 <Breakfast>
    <recipe>
 
+	<title>"Eggs on Toast"</title>
+
 	<author>
 		<nickname>Fred</nickname>
 		<surname>Flintstone</surname>
 	</author>
 
-	<title>"Statistical Database Disclosure"</title>
 
-    <ingredients></ingredients>
+    <ingredients>"eggs, toast, olive oil, butter"</ingredients>
 
-    <instructions></instructions>
-    <instructions></instructions>
-    <instructions></instructions>
-    <instructions></instructions>
+    <instructions>"heat up frying pan"</instructions>
+    <instructions>"put oil on frying pan"</instructions>
+    <instructions>"drop eggs onto frying pan"</instructions>
+    <instructions>"cook for 3 minutes"</instructions>
+    <instructions>"put toast in toaster for 2 minutes"</instructions>
+    <instructions>"put eggs on toast"</instructions>
 
-    <time></time>
-    <serves></serves>
-    <properties></properties>
-    <url></url>
+    <time>
+        <minutes>20</minutes>
+    </time>
+
+    <serves>2</serves>
+
+    <properties>"vegetarian"</properties>
+
+    <!--<url></url>-->
 
     <!--requires modifying-->
-    <img><img>
-    
+    <!--<img><img>-->
+
 
    </recipe>
 
