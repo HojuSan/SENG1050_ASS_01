@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- DTD -->
+<!DOCTYPE Breakfast [
+<!-- + one or more, * zero or more, ? zero or one-->
+
+<!--must add two tags?-->
+<!ELEMENT Breakfast (recipe+)>
+  <!ELEMENT recipe (author+, title, ingredients+, instructions+, time+,
+  serves+, url*, img+, properties*)>
+  <!ELEMENT author (
+	(givenname | nickname)?, surname)>
+  <!ELEMENT givenname (#PCDATA)>
+  <!ELEMENT nickname (#PCDATA)>
+  <!ELEMENT surname (#PCDATA)>
+  <!ELEMENT title (#PCDATA)>
+  <!ELEMENT ingredients (#PCDATA)>
+  <!ELEMENT instructions (#PCDATA)>
+  <!ELEMENT time (#PCDATA)>
+  <!ELEMENT serves (#PCDATA)>
+  <!ELEMENT url (#PCDATA)>
+  <!ELEMENT img (#PCDATA)>
+  <!ELEMENT properties (#PCDATA)>
+]>
+
+<!---->
+<!--<!DOCTYPE Breakfast [-->
+<!-- + one or more, * zero or more, ? zero or one-->
+<!--<!ELEMENT Breakfast (recipe+)>-->
+<!--  <!ELEMENT recipe (author+, title, pub?, year, URL*)>-->
+<!--  <!ELEMENT author (-->
+<!--	(givenname | nickname)?, surname)>-->
+<!--  <!ELEMENT givenname (#PCDATA)>-->
+<!--  <!ELEMENT nickname (#PCDATA)>-->
+<!--  <!ELEMENT surname (#PCDATA)>-->
+<!--  <!ELEMENT title (#PCDATA)>-->
+<!--  <!ELEMENT pub (#PCDATA)>-->
+<!--  <!ELEMENT year (#PCDATA)>-->
+<!--  <!ELEMENT URL (#PCDATA)>-->
+<!--]>-->
+
+<!--XML-->
+<Breakfast>
+   <recipe>
+
+	<author>
+		<nickname>Fred</nickname>
+		<surname>Flintstone</surname>
+	</author>
+
+	<title>"Statistical Database Disclosure"</title>
+
+    <ingredients></ingredients>
+
+    <instructions></instructions>
+    <instructions></instructions>
+    <instructions></instructions>
+    <instructions></instructions>
+
+    <time></time>
+    <serves></serves>
+    <properties></properties>
+    <url></url>
+
+    <!--requires modifying-->
+    <img><img>
+    
+
+   </recipe>
+
+
+</Breakfast>
