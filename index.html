@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!---->
+<head>
+  <meta charset="UTF-8">
+  <title>Chef Master Recipes HomePage</title>
+
+  <style type="text/css">
+  
+  </style>
+
+	<link rel="stylesheet" type="text/css" href="Style.css" XML="bibliography.xml">
+</head>
+
+<body>
+
+	<div id="body">
+
+        <h1>Chef Master Recipes</h1>
+
+        <p>
+            This website shows two styles of cousine with three recipes each. Hope you all enjoy these recipes!!
+        </p>
+
+        <ol>
+          <li>learn about some more features of HTML, that were covered in Week 5 lectures.
+             <ul>
+                <li><a href="#forms">Forms</a></li>
+                <li><a href="#tables">Tables</a></li>
+                <li><a href="#struct">HTML5 Structural Elements</a></li>
+                <li><a href="#imagemap">Image Maps</a></li>
+              </ul>
+          </li>
+        </ol>
+
+
+    <!-- does display data -->
+    <iframe id="Breakfast" src="Breakfast.xml"></iframe>
+
+    <script>
+    if (window.XMLHttpRequest)
+    {// code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+    }
+    else
+    {// code for IE6, IE5
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.open("GET","cd_catalog.xml",false);
+    xmlhttp.send();
+    xmlDoc=xmlhttp.responseXML; 
+
+    document.write("<table border='1'>");
+    var x=xmlDoc.getElementsByTagName("CD");
+    for (i=0;i<x.length;i++)
+    { 
+    document.write("<tr><td>");
+    document.write(x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue);
+    document.write("</td><td>");
+    document.write(x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue);
+    document.write("</td></td>");
+    document.write(x[i].getElementsByTagName("COUNTRY")[0].childNodes[0].nodeValue);
+    document.write("</td></tr>");
+    }
+    document.write("</table>");
+    </script>
+
+</body>
+
+</html>

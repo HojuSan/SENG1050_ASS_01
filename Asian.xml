@@ -1,0 +1,66 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<!--Internal DTD-->
+<!DOCTYPE recipes [
+<!--+ one or more, * zero or more, ? zero or one-->
+<!--must add two tags?-->
+<!ELEMENT recipes (recipe+)>
+    <!ATTLIST recipes type CDATA "Asian">
+  <!ELEMENT recipe (chef?, origin, title, ingredients+, instructions+, time+,
+  serves+, properties+, difficulty+, tastylevel+)>
+  <!ELEMENT chef (givenname, surname)>  <!--attribute is nationality-->
+    <!ATTLIST chef nationality CDATA "America">
+  <!ELEMENT givenname (#PCDATA)>
+  <!ELEMENT surname (#PCDATA)>
+  <!ELEMENT nationality (#PCDATA)>
+  <!ELEMENT origin (#PCDATA)>
+  <!ELEMENT title (#PCDATA)>
+  <!ELEMENT ingredients (main+, ingredient*)>
+  <!ELEMENT main (#PCDATA)>
+  <!ELEMENT ingredient (#PCDATA)>
+  <!ELEMENT instructions (#PCDATA)>
+  <!ELEMENT time (hours?, minutes?, seconds?)>
+  <!ELEMENT hours (#PCDATA)>
+  <!ELEMENT minutes (#PCDATA)>
+  <!ELEMENT seconds (#PCDATA)>
+  <!ELEMENT serves (#PCDATA)>
+  <!ELEMENT properties (#PCDATA)>
+  <!ELEMENT difficulty (#PCDATA)>
+  <!ELEMENT tastylevel (#PCDATA)>
+  <!ELEMENT url (#PCDATA)>
+  <!ELEMENT img (#PCDATA)>
+  <!ENTITY author "Juyong Kim">
+  <!ENTITY copyright "c32244203">
+  <!--<author>&author;&copyright;</author>-->
+]>
+
+<recipes type="Asian">
+    <recipe>
+        <chef nationality="French">
+            <givenname>Gordan</givenname>
+            <surname>Ramsey</surname>
+        </chef>
+        <origin>Korea</origin>
+        <title>French Toast</title>
+        <ingredients>
+            <main>Toast</main>
+            <ingredient>Butter</ingredient>
+            <ingredient>Egg</ingredient>
+        </ingredients>
+        <instructions>cover 2 pieces of bread in butter both sides</instructions>
+        <instructions>cut a hole in the bread</instructions>
+        <instructions>put the bread on a frying pan</instructions>
+        <instructions>crack an egg in the hole</instructions>
+        <instructions>fry it on both sides</instructions>
+        <instructions>done</instructions>
+        <time>
+            <hours>0</hours>
+            <minutes>15</minutes>
+            <seconds>0</seconds>
+        </time>
+        <serves>2</serves>
+        <properties>vegetarian</properties>
+        <difficulty>easy</difficulty>
+        <tastylevel>5</tastylevel>
+    </recipe>
+</recipes>

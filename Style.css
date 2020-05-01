@@ -1,6 +1,30 @@
-body {margin:10px; background-color:#fffaee;color:black;font-family:arial;}
+#head 
+{ 
+    width: 100% 
+}
 
-#head { width: 100% }
+body 
+{
+    background-image:url('background.jpg');
+    margin:1cm; 
+}
+
+h1 
+{ 
+    font-size: 300%;
+    color: royalblue;
+    text-align: center 
+}
+h2 
+{ 
+    text-align: left 
+}
+p
+{
+   color: black; 
+}
+
+/*needs a class attribute, .xxx selector, div, span*/
 
 #location { text-align: left }
 #location img { vertical-align: top; float: left }
@@ -12,10 +36,6 @@ body {margin:10px; background-color:#fffaee;color:black;font-family:arial;}
 #menu { width: 15%; border-right-style: groove; vertical-align: top; padding: 0 }
 #menu ul { margin: 0; padding: 0 }
 #menu li { list-style-type:none; margin: 1ex 1ex 1ex 0ex; background-color: #eeeeee }
-
-h1 { text-align: center }
-h2 { text-align: left }
-hr { width: 50%; text-align: center; color:navy }
 
 #foot { width: 100% }
 
