@@ -33,14 +33,16 @@
   <!ENTITY copyright "c32244203">
   <!--<author>&author;&copyright;</author>-->
 ]>
+
 <recipes type="European">
+<!--European Recipe 1-->
     <recipe>
         <chef nationality="French">
             <givenname>Gordan</givenname>
             <surname>Ramsey</surname>
         </chef>
-        <origin>Germany</origin>
-        <title>French Toast</title>
+        <origin>France</origin>
+        <title>Holy French Toast</title>
         <ingredients>
             <main>Toast</main>
             <ingredient>Butter</ingredient>
@@ -60,6 +62,66 @@
         <serves>2</serves>
         <properties>vegetarian</properties>
         <difficulty>easy</difficulty>
-        <tastylevel>5</tastylevel>
+        <tastylevel>6</tastylevel>
+    </recipe>
+<!--European Recipe 2-->
+    <recipe>
+        <chef nationality="Italian">
+            <givenname>Gordan</givenname>
+            <surname>Pansey</surname>
+        </chef>
+        <origin>Itatlian</origin>
+        <title>Italian Toast</title>
+        <ingredients>
+            <main>Vegan Cheese</main>
+            <ingredient>tomato sauce</ingredient>
+            <ingredient>toast</ingredient>
+            <ingredient>basil</ingredient>
+        </ingredients>
+        <instructions>cover 2 pieces of bread in tomato sauce both sides</instructions>
+        <instructions>cut a hole in the bread</instructions>
+        <instructions>put the bread on a frying pan</instructions>
+        <instructions>put cheese and basil in the hole</instructions>
+        <instructions>fry it on both sides</instructions>
+        <instructions>done</instructions>
+        <time>
+            <hours>0</hours>
+            <minutes>10</minutes>
+            <seconds>20</seconds>
+        </time>
+        <serves>2</serves>
+        <properties>vegan</properties>
+        <difficulty>easy</difficulty>
+        <tastylevel>2</tastylevel>
+    </recipe>
+    <!--European Recipe 3-->
+    <recipe>
+        <chef nationality="Britan">
+            <givenname>Random</givenname>
+            <surname>Samsey</surname>
+        </chef>
+        <origin>British</origin>
+        <title>Cheesy Toast</title>
+        <ingredients>
+            <main>Toast</main>
+            <ingredient>Butter</ingredient>
+            <ingredient>Cheese</ingredient>
+        </ingredients>
+        <instructions>cover 2 pieces of bread in butter both sides</instructions>
+        <instructions>put cheese on one side the flip</instructions>
+        <instructions>repeat it for the other side</instructions>
+        <instructions>put the bread on a frying pan</instructions>
+        <instructions>fry it on both sides</instructions>
+        <instructions>done</instructions>
+        <time>
+            <hours>0</hours>
+            <minutes>5</minutes>
+            <seconds>0</seconds>
+        </time>
+        <serves>2</serves>
+        <properties>vegetarian</properties>
+        <properties>pescatarian</properties>
+        <difficulty>extra hard</difficulty>
+        <tastylevel>10</tastylevel>
     </recipe>
 </recipes>

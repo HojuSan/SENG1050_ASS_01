@@ -13,16 +13,32 @@ h1
 { 
     font-size: 300%;
     color: royalblue;
+    text-transform: uppercase;
     text-align: center 
 }
 h2 
 { 
-    text-align: left 
+    font-size: 200%;
+    text-align: left; 
+    text-transform: uppercase;
+    color: rgb(4, 109, 100);
 }
 p
 {
-   color: black; 
+    font-size: 120%;
+   color: rgb(230, 32, 32); 
+   font-style: italic
 }
+img
+{
+    max-width:100%;
+    max-height:100%;
+}
+
+a:link {color: blue}
+a:visited {color:purple}
+a:active {color:red}
+a:hover {font-size:120%; color:rgb(39, 127, 168)}
 
 /*needs a class attribute, .xxx selector, div, span*/
 
