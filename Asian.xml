@@ -4,10 +4,10 @@
 <!DOCTYPE recipes [
 <!--+ one or more, * zero or more, ? zero or one-->
 <!--must add two tags?-->
-<!ELEMENT recipes (recipe+)>
+<!ELEMENT recipes (recipe+, creator+)>
     <!ATTLIST recipes type CDATA "Asian">
   <!ELEMENT recipe (chef?, origin, title, ingredients+, instructions+, time+,
-  serves+, properties+, difficulty+, tastylevel+)>
+  serves+, properties+, difficulty+, tastylevel+,url+,img+)>
   <!ELEMENT chef (givenname, surname)>  <!--attribute is nationality-->
     <!ATTLIST chef nationality CDATA "America">
   <!ELEMENT givenname (#PCDATA)>
@@ -29,8 +29,9 @@
   <!ELEMENT tastylevel (#PCDATA)>
   <!ELEMENT url (#PCDATA)>
   <!ELEMENT img (#PCDATA)>
+  <!ELEMENT creator (#PCDATA)>
   <!ENTITY author "Juyong Kim">
-  <!ENTITY copyright "c32244203">
+  <!ENTITY copyright "Copyright c32244203">
   <!--<author>&author;&copyright;</author>-->
 ]>
 
@@ -65,6 +66,8 @@
         <properties>vegan</properties>
         <difficulty>medium</difficulty>
         <tastylevel>10</tastylevel>
+        <url>https://en.wikipedia.org/wiki/Kimchi</url>
+        <img>"kimchi.jpeg"</img>
     </recipe>
 <!--Asian Recipe 2-->
     <recipe>
@@ -97,6 +100,8 @@
         <properties>vegetarian</properties>
         <difficulty>easy</difficulty>
         <tastylevel>4</tastylevel>
+        <url>https://en.wikipedia.org/wiki/Dumpling</url>
+        <img>"dumpling.jpeg"</img>
     </recipe>
 <!--Asian Recipe 3-->
     <recipe>
@@ -132,5 +137,11 @@
         <properties>vegetarian</properties>
         <difficulty>hard</difficulty>
         <tastylevel>11</tastylevel>
+        <url>https://en.wikipedia.org/wiki/Kimchi</url>
+        <img>"kimchi.jpeg"</img>
     </recipe>
+    <creator>
+        &author;
+        &copyright;
+    </creator>
 </recipes>
